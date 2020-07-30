@@ -1,0 +1,14 @@
+body{
+	background-image: url(https://images.desimartini.com/media/uploads/2015-5/duff_beer.jpg);
+	font-family: 'Ranchers', cursive;
+}
+.theheading{
+	color: gold;
+	animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

@@ -9,26 +9,52 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href = "duff.css">
+	<link href="index.css" rel="stylesheet">
 
-    <title>Duff Beer</title>
+    <title>Home</title>
   </head>
   <body>
 	<!-- Image and text -->
-	<nav class="navbar navbar-light bg-light">
-	  <a class="navbar-brand" href="#">
-		<img src="https://res.cloudinary.com/teepublic/image/private/s--K842czoL--/c_crop,x_10,y_10/c_fit,w_1109/c_crop,g_north_west,h_1260,w_1260,x_-76,y_-79/co_rgb:c62b29,e_colorize,u_Misc:One%20Pixel%20Gray/c_scale,g_north_west,h_1260,w_1260/fl_layer_apply,g_north_west,x_-76,y_-79/bo_0px_solid_white/t_Resized%20Artwork/c_fit,g_north_west,h_1054,w_1054/co_ffffff,e_outline:53/co_ffffff,e_outline:inner_fill:53/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1561478825/production/designs/5160065_0.jpg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-		Duff Beer
-	  </a>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+			<img src="logo.png" width="100" height="50" alt="">
+		</a>
+		<a class="navbar-brand" href="#">Welcome To my Website</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Available Apps
+				</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <a class="dropdown-item" href="#">Face Detector</a>
+			  <a class="dropdown-item" href="#">Pet Store</a>
+			  <a class="dropdown-item" href="duff.html">Duff Beer</a
+			</div>
+			</ul>
+			</div>
 	</nav>
+	<br/>
+	<div class="alert alert-primary" role="alert">
+		1. <a href="#" class="alert-link">Face Detector Application</a>
+		<br/>Give it a click if you like to try this Single Page Web Application which detects faces from an input image. It has a fully functioning New User Registration and Login support. It was created using Node.js & React.js as front-end language and Express.js as back-end language and it uses PostgreSQL for DB functions.
+	</div>
 	
-	<h1 class="theheading">Duff Beer<span class="badge badge-secondary">New & Improved</span></h1>
+	<div class="alert alert-primary" role="alert">
+		2. <a href="#" class="alert-link">Cat Friends (A Pet Store)</a>
+		<br/>Give it a click if you like to try this Single Page Pet store which dynamically filters pets based on User search criterion. It was created using Node.js & React.js
+	</div>
 	
-	<div class="jumbotron jumbotron-fluid">
-	  <div class="container">
-		<h1 class="display-4">Duff Beer</h1>
-		<p class="lead">Can't Get Enough of That Wonderful Duff.<br><br>It's Always Time For Duff.<br><br>Homer Simpson recommended brand.</p>
-	  </div>
+	<div class="alert alert-primary" role="alert">
+		3. <a href="duff.html" class="alert-link">The Simpsons - Duff Beer</a>
+		<br/>Give it a click if you like to see A comical Duff beer Ad based on the show "The Simpsons". It was created using Bootstrap.
 	</div>
 	
     <!-- Optional JavaScript -->

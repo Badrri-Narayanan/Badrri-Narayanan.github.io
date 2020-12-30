@@ -1,78 +1,399 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<head>
 
-	<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+   <meta charset="utf-8">
+	<title>Badrri's Portfolio</title>
+	<meta name="description" content="Badrri's portfolio of projects">  
+	<meta name="author" content="Badrri Narayanan S">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link href="index.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <title>Home</title>
-  </head>
-  <body>
-	<!-- Image and text -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">
-			<img src="logo.png" width="100" height="50" alt="">
-		</a>
-		<a class="navbar-brand" href="#">Welcome To my Website</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-			<li class="nav-item active">
-				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-			</li>
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Available Apps
-				</a>
-			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			  <a class="dropdown-item" href="https://badrri-narayanan.github.io/face-detector/">Face Detector</a>
-			  <a class="dropdown-item" href="https://badrri-narayanan.github.io/shopbridge/">Shop Bridge</a>
-			  <a class="dropdown-item" href="https://badrri-narayanan.github.io/restaurant-menu/">Hotel Badrri Bhavan</a>
-			  <a class="dropdown-item" href="https://badrri-narayanan.github.io/petstore/">Pet Store</a>
-			  <a class="dropdown-item" href="duff.html">Duff Beer</a
-			</div>
-			</ul>
-			</div>
-	</nav>
-	<br/>
-	<div class="alert alert-primary" role="alert">
-		1. <a href="https://badrri-narayanan.github.io/face-detector/" class="alert-link">Face Detector Application</a>
-		<br/>Give it a click if you like to try this Single Page Web Application which detects faces from an input image. It has a fully functioning New User Registration and Login support. It was created using Node.js & React.js as front-end language and Express.js as back-end language and it uses PostgreSQL for DB functions.
-	</div>
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+	<link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+<body id="top">
+
+   <header>   	
+   	<div class="row">
+
+   		<div class="top-bar" style="width: 100%;">
+   			<a class="menu-toggle" href="#"><span>Menu</span></a>
+
+	   		<div>
+		         <a href="#">Badrri's Portfolio Website</a>
+		      </div>		      
+
+		   	<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
+						<li><a class="smoothscroll"  href="#about" title="">About</a></li>
+						<li><a class="smoothscroll"  href="#resume" title="">Resume</a></li>
+						<li><a class="smoothscroll"  href="#portfolio" title="">Projects</a></li>					
+						<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>				
+					</ul>
+				</nav>    		
+   		</div>
+   		
+   	</div>		
+   </header>
+
+   <section id="intro">   
+
+   	<div class="intro-overlay"></div>	
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
+
+	   			<h5>Hello, World.</h5>
+	   			<h1>I'm Badrri.</h1>
+
+	   			<p class="intro-position">
+	   				<span>Software Developer</span>
+	   				<span> Java, Spring Boot & React.js</span> 
+	   			</p>
+
+	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div>
+
+   </section> <!-- /intro -->
+
+   <section id="about">  
+
+   	<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h1>Let me introduce myself.</h1>
+
+   			<div class="intro-info">
+
+   				<img style="height: 10%; width: 10%;" src="images/profile-pic.png" alt="Profile Picture">
+
+   				<p class="lead">I am working as a Developer for a couple years now. I am passionate about Web development. The technologies that I am interested in are Spring boot, Core Java, React.js and SQL. I like to learn new technologies and I utilize the knowledge that I have gained at work and also to work on some projects on my own.</p>
+   			</div>   			
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+   	<div class="row about-content">
+
+   		<div class="col-six tab-full">
+
+   			<h3>Profile</h3>
+   			<p>I am a Back-end Developer and I am interested in Full Stack Development</p>
+
+   			<ul class="info-list">
+   				<li>
+   					<strong>Fullname:</strong>
+   					<span>Badrri Narayanan S</span>
+   				</li>
+   				<li>
+   					<strong>Birth Date:</strong>
+   					<span>September 15, 1995</span>
+   				</li>
+   				<li>
+   					<strong>Job:</strong>
+   					<span>Software Engineer</span>
+   				</li>
+   				<li>
+   					<strong>Email:</strong>
+   					<span>badrri1995@gmail.com</span>
+   				</li>
+
+   			</ul>
+
+   		</div>
+
+   		<div class="col-six tab-full">
+
+   			<h3>Skills</h3>
+   			<p>The following are the skill that I am actively using along with my familarity to it</p>
+
+				<ul class="skill-bars">
+				   <li>
+				   	<div class="progress percent70"><span>70%</span></div>
+				   	<strong>Java - Spring Boot</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent65"><span>65%</span></div>
+				   	<strong>C/C++</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent60"><span>60%</span></div>
+				   	<strong>JavaScript</strong>
+				   </li>
+				   <li>
+					<div class="progress percent60"><span>60%</span></div>
+					<strong>SQL</strong>
+				   </li>
+				   <li>
+					<div class="progress percent60"><span>40%</span></div>
+					<strong>Node.js</strong>
+				   </li>
+				   <li>
+					<div class="progress percent60"><span>40%</span></div>
+					<strong>Hibernate</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent25"><span>25%</span></div>
+				   	<strong>TCL/TK</strong>
+				   </li>
+      
+				</ul>
+
+   		</div>
+
+   	</div>
+
+   	<div class="row button-section">
+   		<div class="col-twelve">
+   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Contact Me</a>
+   			<a href="https://www.linkedin.com/in/badrri-narayanan-1a74b010a/" target="_blank" class="button button-primary">LinkedIn Profile</a>
+   		</div>   		
+   	</div>
+
+   </section>
+
+    <section id="resume" class="grey-section">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Resume</h5>
+   			<h1>More of my credentials.</h1>
+
+   			<p class="lead">Current working as a Software Engineer @ Mphasis</p>
+
+   		</div>   		
+   	</div> 
+
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Work Experience</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Software Engineer</h3>
+	   					<p>March 2018 - Present</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Mphasis Pvt. Ltd.</h4>
+	   					<p>Working as a Back-end Java Developer on an Airlines Ticket Reservation System Project which gives customers the best and the cheapest Air fare between two locations. Worked as a developer to improve the response time in production and to strictly implement the overall business logic of the application.<br/><br/>Made changes to add a new table to the Database and connected to the Pricing Engine. Added new validations for the incoming pricing requests sent by the client.</p>
+	   				</div>
+
+	   			</div>
+
+   			</div>   			
+
+   		</div>
+   		
+   	</div>
+   	
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Education</h2>
+
+   		</div>
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Bachelor's Degree - B.Tech</h3>
+	   					<p>July 2013 - August 2017</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Amrita Vishwa Vidhyapeetham</h4>
+	   					<p>CGPA: 7.75</p>
+	   				</div>
+
+	   			</div>
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Class XII</h3>
+	   					<p>May 2012 - June 2013</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>SBOA School & Junior College</h4>
+	   					<p>Percentage Scored 88%</p>
+	   				</div>
+
+					<div class="timeline-header">
+						<h3>Class X</h3>
+						<p>May 2010 - June 2011</p>
+					</div>
+
+					<div class="timeline-content">
+						<h4>Bhaktavathsalam Vidhyashram</h4>
+						<p>Percentage Scored 90%</p>
+					</div>
+
+	   			</div>
+
+   			</div>   			
+
+   		</div>
+   		
+   	</div>
+		
+	</section>
+
+	<section id="portfolio">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>My Project Portfolio</h5>
+   			<h1>Check Out Some of My Works.</h1>
+
+   			<p class="lead">The following are some of the project I have worked on. Click on the title visit the site.</p>
+
+   		</div>   		
+   	</div> 
+
+   	<div class="row portfolio-content">
+		
+		<div>
+			<h2>1. Face Detector Application</h2>	
+			<p>A Single Page Web Application which detects faces from an input image URL. It has a fully functioning New User Registration and Login support. It was created using ReactJS as front-end language and Express.js as back-end language and it uses PostgreSQL for DB functions. <a href="https://badrri-narayanan.github.io/face-detector/" target="_blank" class="blink_me">Click Here!</a></p>
+		</div>
+		
+		<div class="alert alert-primary" role="alert">
+			<h2>2. E-Commerce Application</h2>
+			<p>A Single Page E-Commerce Web Application with functionality to update and new products to the list of items. It was created using ReactJS as front-end language and Express.js as back-end language and it uses PostgreSQL for DB functions. <a href="https://badrri-narayanan.github.io/shopbridge/" target="_blank" class="blink_me">Click Here!</a></p>
+		</div>
+				
+		<div class="alert alert-primary" role="alert">
+			<h2>3. Hotel Menu (A demo AngularJS App)</h2>
+			<p>Created a dynamic Website using AngularJS App. It uses AngularJS as front-end and Java Spring boot as Back-end. <a href="https://badrri-narayanan.github.io/restaurant-menu/" target="_blank" class="blink_me">Click Here!</a></p>
+		</div>
 	
-	<div class="alert alert-primary" role="alert">
-		2. <a href="https://badrri-narayanan.github.io/shopbridge/" class="alert-link">E-Commerce Application</a>
-		<br/>Created a Single Page full-fledged E-Commerce Web Application which has both Customer-side and seller-side functionalities. It was created using React.js as front-end language and Express/Node.js as back-end language and it uses PostgreSQL for DB functions.
-	</div>
-			
-	<div class="alert alert-primary" role="alert">
-		3. <a href="https://badrri-narayanan.github.io/restaurant-menu/" class="alert-link">Hotel Badrri Bhavan (A demo AngularJS App)</a>
-		<br/>Created a dynamic Website using AngularJS App. It uses AngularJS as front-end, Node.js HTTP Server as back-end and PostgreSQL DB
-	</div>
+		<div class="alert alert-primary" role="alert">
+			<h2>4. Cat Friends (A Demo Pet Store)</h2>
+			<p>A Single Page Pet store Application which can dynamically filters pets based on User input search criterion. It was created using Node.js & ReactJS.  <a href="https://badrri-narayanan.github.io/petstore/" target="_blank" class="blink_me">Click Here!</a></p>
+		</div>
+		
+   	</div> <!-- /portfolio-content --> 
+		
+	</section> <!-- /portfolio --> 
+	
+	<section id="contact">
 
-	<div class="alert alert-primary" role="alert">
-		4. <a href="https://badrri-narayanan.github.io/petstore/" class="alert-link">Cat Friends (A Demo Pet Store)</a>
-		<br/>Give it a click if you like to try this Single Page Pet store which dynamically filters pets based on User search criterion. It was created using Node.js & React.js
-	</div>
-	
-	<div class="alert alert-primary" role="alert">
-		5. <a href="duff.html" class="alert-link">The Simpsons - Duff Beer</a>
-		<br/>Give it a click if you like to see A comical Duff beer Ad based on the show "The Simpsons". It was created using Bootstrap.
-	</div>
-	
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  </body>
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Contact</h5>
+   			<h1>I'd Love To Hear From You.</h1>
+
+   			<p class="lead">Please contact me through E-mail or Phone</p>
+
+   		</div> 
+   	</div> <!-- /section-intro -->
+
+   	<div class="row contact-info">
+
+   		<div class="col-four tab-full collapse">
+
+   			<div class="icon">
+   				<i class="icon-mail"></i>
+   			</div>
+
+   			<h5>Email Me At</h5>
+
+   			<a href="mailto:badrri1995@gmail.com" style="color: blanchedalmond;">badrri1995@gmail.com</a>
+
+   		</div>
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-phone"></i>
+   			</div>
+
+   			<h5>Call Me At</h5>
+
+   			<p>Mobile: (+91) 8754497588<br>
+			   	Alt. Mobile: (+91) 9176139131
+			   </p>
+
+   		</div>
+   		
+   	</div> <!-- /contact-info -->
+		
+	</section> <!-- /contact -->
+
+   <footer>
+     	<div class="row">
+
+      	<div class="col-eight tab-full">
+	      	<div class="copyright">
+		        	<span>© Copyright 2018 </span> 
+		        	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span> 
+		        	<span>Distributed by <a href="https://themewagon.com/">themewagon</a></span>	         	
+		         </div>		                  
+	      	</div>
+
+	      	<div id="go-top">
+		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+		      </div>
+
+      	</div> <!-- /row -->     	
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
 </html>

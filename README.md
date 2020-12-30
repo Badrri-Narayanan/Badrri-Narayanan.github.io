@@ -1,1 +1,1 @@
-This is my first git project
+This is my web portfolio for showcasing my projects.

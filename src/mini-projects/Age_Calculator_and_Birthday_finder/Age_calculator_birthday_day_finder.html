@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Age Calculator & Birthday Day Finder</title>
+		<script src="./scripts/moment.js"></script>
+	</head>
+	<body style="padding:10px; text-align: center; background-color: bisque;" >
+		<h1>Age Calculator & Birthday day finder</h1>
+		<div id = "txt-area">
+			<div style="padding:10px;">
+				<input type="date" id="dob"></input>
+			</div>
+			<div style="padding:10px; ">
+				<button style="background-color: cornflowerblue;" onclick="calculateAge()">Calculate my Age</button>
+				<button style="background-color: cornflowerblue;" onclick="findBDay()">Find my Birthday Day</button>
+			</div>
+			<br/>
+			<div id="bday-txt"></div>
+			<div id="age-txt"></div>
+		</div>
+	</body>
+	<script>
+		const theDaysOfTheWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+		function clearPrevious() {
+			document.getElementById("bday-txt").innerHTML = "";
+			document.getElementById("age-txt").innerHTML = "";
+		}
+
+		function checkIfDateIsValid() {
+			clearPrevious();
+			let dob = document.getElementById("dob");
+			if(moment(dob.value).isValid()) {
+				return true;
+			}
+			dob.focus();
+			return false;
+		}
+
+		function findBDay() {
+			if(checkIfDateIsValid()) {
+				let dob = document.getElementById("dob");
+				let bdate = new Date(dob.value);
+				let day = bdate.getDay();
+				
+				let bdayTxt = document.getElementById("bday-txt");
+				bdayTxt.innerText = "You were born on " + theDaysOfTheWeek[day];
+			}
+		}
+
+		function calculateAge() {
+			if(checkIfDateIsValid()) {
+				let dob = new Date(document.getElementById("dob").value);
+				let difference = moment.preciseDiff(new Date(), dob, true);
+				document.getElementById("age-txt").innerHTML = "Your are " 
+					+ difference.years + " years " 
+					+ difference.months + " months " 
+					+ difference.days + " days "
+					+ " old";
+			}
+		}
+	</script>
+</html>

@@ -1,5 +1,15 @@
 {
+  "name": "my-portfolio-project",
+  "source": [
+    "src/index.html",
+    "src/mini-projects/Rock_Paper_Scissors/rock_paper_scissors.html",
+    "src/mini-projects/Age_Calculator_and_Birthday_finder/Age_calculator_birthday_day_finder.html"
+  ],
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
   "devDependencies": {
-    "parcel": "^2.0.1"
+    "parcel": "latest"
   }
 }

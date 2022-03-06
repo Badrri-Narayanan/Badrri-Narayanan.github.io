@@ -1,4 +1,6 @@
-let score = document.getElementById("scoreVal");
+let yourScore = document.getElementById("yourScoreVal");
+let computerScore = document.getElementById("computerScoreVal");
+let totalGames = document.getElementById("totalGames");
 let User = document.getElementById("user");
 let Computer = document.getElementById("comp");
 let Result = document.getElementById("result");
@@ -10,11 +12,13 @@ const compute_result_score = () => {
 	} else if ((User.innerHTML == "Rock" && Computer.innerHTML == "Scissors") 
 				|| (User.innerHTML == "Paper" && Computer.innerHTML == "Rock")
 				|| (User.innerHTML == "Scissors" && Computer.innerHTML == "Paper")) {
-		Result.innerHTML = "You win!"
-		score.innerHTML++;
+		Result.innerHTML = "You win!";
+		yourScore.innerHTML++;
 	} else {
-		Result.innerHTML = "You lose"
+		Result.innerHTML = "You lose";
+		computerScore.innerHTML++;
 	}
+	totalGames.innerHTML++
 }
 
 const UserInput = (event) => {

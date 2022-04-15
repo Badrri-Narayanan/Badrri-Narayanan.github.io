@@ -52,7 +52,7 @@
 			if(checkIfDateIsValid()) {
 				let dob = new Date(document.getElementById("dob").value);
 				let difference = moment.preciseDiff(new Date(), dob, true);
-				document.getElementById("age-txt").innerHTML = "Your are " 
+				document.getElementById("age-txt").innerHTML = "You are " 
 					+ difference.years + " years " 
 					+ difference.months + " months " 
 					+ difference.days + " days "

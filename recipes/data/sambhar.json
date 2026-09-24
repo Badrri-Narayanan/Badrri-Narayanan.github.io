@@ -1,0 +1,28 @@
+{
+    "title": "Sambhar",
+    "emoji": "🍲",
+    "category": "Kuzhambu & Rasam",
+    "description": "Toor dal and tamarind stew with sautéed vegetables and sambhar powder.",
+    "tags": ["toor dal", "tamarind", "vegetables"],
+    "ingredients": [
+        "Tamarind and rock salt",
+        "Hot water (for soaking)",
+        "Vegetables of choice: chopped onions, okra (lady's finger) or capsicum (bell pepper)",
+        "1 ½ cups Toor dal (split pigeon peas)",
+        "Oil",
+        "Mustard seeds",
+        "3 Dried red chillies",
+        "Curry leaves",
+        "Asafoetida (perungayam)",
+        "¼ tsp Fenugreek seeds (optional)",
+        "3 tbsp Sambhar powder",
+        "Small piece of jaggery"
+    ],
+    "steps": [
+        { "title": "Prepare tamarind water", "text": "Soak the tamarind and rock salt in hot water for 1 hour. Mix well, extract the juice and discard the fibrous residue." },
+        { "title": "Cook the dal", "text": "Wash the toor dal twice. Pressure cook with adequate water for 5–6 whistles until soft." },
+        { "title": "Sauté vegetables", "text": "Heat oil in a frying pan. Add mustard seeds, dried red chillies, curry leaves, asafoetida and fenugreek seeds (if using). Add your choice of chopped vegetables and sauté well." },
+        { "title": "Simmer the base", "text": "Add 3 tablespoons of sambhar powder, the jaggery and the leftover dal cooking water to the tamarind extract. Bring to a boil and let it simmer for 20 minutes." },
+        { "title": "Combine & finish", "text": "Add the cooked, mashed toor dal to the boiling tamarind mixture. Mix well, let it simmer for 1 minute and turn off the heat." }
+    ]
+}

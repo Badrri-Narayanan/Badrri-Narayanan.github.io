@@ -1,0 +1,27 @@
+{
+    "title": "Rice & Moong Dal Usili",
+    "emoji": "🍚",
+    "category": "Rice",
+    "description": "Ghee-roasted rice and moong dal pressure cooked with a crunchy dal and red chilli tempering.",
+    "tags": ["rice", "moong dal", "ghee", "pressure cooker"],
+    "ingredients": [
+        "1 cup Rice",
+        "¾ cup Moong dal (split yellow mung beans)",
+        "2 tbsp Clarified butter (Ghee)",
+        "5 tbsp Oil",
+        "4 Dried red chillies (broken)",
+        "3 tbsp Split chana dal (Kadala paruppu)",
+        "3 tbsp Urad dal (split skinless black gram)",
+        "½ tsp Asafoetida (Perungayam)",
+        "Fresh coriander leaves",
+        "4 ½ cups Water",
+        "1 ½ tsp Salt"
+    ],
+    "steps": [
+        { "title": "Roast grains", "text": "Wash the rice and moong dal. Dry-roast in a pan until the excess water evaporates. Add 2 tablespoons of ghee and continue roasting until golden brown. Remove and set aside." },
+        { "title": "Tempering", "text": "Heat 5 tablespoons of oil in a pan. Add broken dried red chillies, split chana dal, urad dal, asafoetida and coriander leaves; sauté until lightly browned." },
+        { "title": "Prepare water mixture", "text": "Add 4 ½ cups of water and 1 ½ teaspoons of salt to the tempering and bring to a boil." },
+        { "title": "Pressure cook", "text": "Combine the boiling water mixture and the roasted rice-dal mixture in a vessel. Place the vessel inside a pressure cooker and cook for 3 whistles." },
+        { "title": "Serve", "text": "Allow the pressure to release naturally, stir well and serve hot." }
+    ]
+}

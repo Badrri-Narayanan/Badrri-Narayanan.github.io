@@ -1,0 +1,44 @@
+{
+    "title": "Brinjal Spice Powder Fry",
+    "altName": "Kathrikai Karamadhu",
+    "emoji": "🍆",
+    "category": "Sides & Poriyal",
+    "description": "Brinjal cooked soft in oil, then tossed in a freshly roasted and ground coriander-dal spice powder.",
+    "tags": ["brinjal", "eggplant", "spice powder"],
+    "ingredients": [
+        {
+            "group": "For the spice mix",
+            "items": [
+                "4 tbsp Coriander seeds (Dhaniya)",
+                "3 tbsp Split chana dal (Kadala paruppu)",
+                "2 tbsp Urad dal (split skinless black gram)",
+                "4 Dried red chillies",
+                "¼ tsp Fenugreek seeds (Vendhayam)",
+                "4 tbsp Oil",
+                "½ tsp Asafoetida (Perungayam)",
+                "½ tsp Turmeric powder"
+            ]
+        },
+        {
+            "group": "For the fry",
+            "items": [
+                "Brinjal (Eggplant / Kathrikai), chopped",
+                "6 tbsp Oil",
+                "Mustard seeds",
+                "2 tbsp Split chana dal",
+                "2 tbsp Urad dal",
+                "1 tsp Salt"
+            ]
+        }
+    ],
+    "steps": [
+        { "title": "Roast spice base", "text": "Heat 4 tablespoons of oil. Sauté coriander seeds, 3 tbsp chana dal, 2 tbsp urad dal, dried red chillies and fenugreek seeds. Towards the end, add asafoetida and turmeric powder." },
+        { "title": "Grind", "text": "Remove from heat and allow to cool completely. Blend into a coarse powder using a mixer/grinder." },
+        { "title": "Sauté brinjal", "text": "Heat 6 tablespoons of oil in a tawa or pan. Add mustard seeds, 2 tbsp chana dal and 2 tbsp urad dal. Add the chopped brinjal and sauté. Add 1 teaspoon of salt." },
+        { "title": "Cook covered", "text": "Cover with a lid and cook on medium-low heat until the brinjal turns soft and yellowish-cooked in oil." },
+        { "title": "Finish", "text": "Add the prepared coarse spice powder and stir well until the brinjal is evenly coated." }
+    ],
+    "tips": [
+        "Add the asafoetida and turmeric at the very end of roasting so they don't burn."
+    ]
+}

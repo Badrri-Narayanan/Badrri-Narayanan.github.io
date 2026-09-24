@@ -3,60 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/myprojects.styles.css" />
-    <title>My Projects</title>
+    <meta name="description" content="Projects built by Badrri Narayanan S: Java, Spring Boot, Go and React.">
+    <title>Projects · Badrri Narayanan</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/myprojects.styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="panel panel-default">
-            <h1>List of my Portfolio Projects</h1>
-        </div>
-        <div class="list-group projects">
-            
-            <a href="https://student-mvc-springboot.herokuapp.com" target="_blank" class="list-group-item">
-                <span>
-                    <h4>Student Management Application</h4>	
-                    A Spring boot full-stack Application which helps maintains a list of students. It has three different views for three types of users: Teacher, Principal and Admin. It uses Spring MVC for front-end, Spring Security and Spring Web Services for back-end and Hibernate and Postgres for DB functions.
-                </span>
-            </a>
+    <div class="bg-glow" aria-hidden="true"></div>
 
-            <a href="https://crwn-clothing-badrri2021.herokuapp.com/" target="_blank" class="list-group-item">
-                <span>
-                    <h4>CRWN Clothing</h4>	
-                    A Single Page ReactJS Application integrated with React-Redux, React-Router. It uses Firebase for user authentication and registration. It uses Stripe API for handling payments.
-                </span>
-            </a>
+    <header class="site-header">
+        <a class="brand" href="./index.html">Badrri<span>.</span></a>
+        <nav>
+            <a href="./index.html">Resume</a>
+            <a href="https://github.com/Badrri-Narayanan" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/badrri-narayanan-1a74b010a/" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+    </header>
 
-            <a href="https://badrri-narayanan.github.io/face-detector/" target="_blank" class="list-group-item">
-                <span>
-                    <h4>Face Detector Application</h4>	
-                    A Single Page Web Application which detects faces from an input image URL. It has a fully functioning New User Registration and Login support. It was created using ReactJS as front-end language and Express.js as back-end language and it uses PostgreSQL for DB functions.
-                </span>
-            </a>
-            
-            <a href="https://badrri-narayanan.github.io/shopbridge/" target="_blank" class="list-group-item">
-                <span>
-                    <h4>E-Commerce Application</h4>
-                    A Single Page E-Commerce Web Application with functionality to update and new products to the list of items. It was created using ReactJS as front-end language and Express.js as back-end language and it uses PostgreSQL for DB functions.
-                </span>
-            </a>
-                         
-            <a href="https://badrri-narayanan.github.io/restaurant-menu/" target="_blank" class="list-group-item">
-                <span>
-                    <h4>Hotel Menu (A demo AngularJS App)</h4>
-                    Created a dynamic Website using AngularJS App. It uses AngularJS as front-end and Java Spring boot as Back-end.
-                </span>
-            </a>
-        
-            <a href="https://badrri-narayanan.github.io/petstore/" target="_blank" class="list-group-item">
-                <span>
-                    <h4>Cat Friends (A Demo Pet Store)</h4>
-                    A Single Page Pet store Application which can dynamically filters pets based on User input search criterion. It was created using Node.js & ReactJS.
-                </span>
-            </a>
-            
-        </div>
-    </div>
+    <main>
+        <section class="hero">
+            <p class="eyebrow">Portfolio</p>
+            <h1>Things I've <span class="gradient-text">built</span>.</h1>
+            <p class="lead">Back-end services in Java, Spring Boot and Go, plus the React and Angular front-ends that talk to them.</p>
+
+            <div class="filters" role="group" aria-label="Filter projects">
+                <button class="chip active" data-filter="all">All</button>
+                <button class="chip" data-filter="backend">Back-end</button>
+                <button class="chip" data-filter="frontend">Front-end</button>
+                <button class="chip" data-filter="live">Live demos</button>
+            </div>
+        </section>
+
+        <section class="grid" id="projects">
+
+            <article class="card featured" data-tags="backend">
+                <div class="card-top">
+                    <span class="icon" aria-hidden="true">☁️</span>
+                    <span class="status source">Source</span>
+                </div>
+                <h2>Weather Forecast MCP Server</h2>
+                <p>A Model Context Protocol server that gives Claude Desktop weather forecast tools. It wraps a Forecast REST API with Spring AI over the streamable HTTP transport, so an AI assistant can ask for a detailed forecast for any location.</p>
+                <ul class="tags">
+                    <li>Java 21</li><li>Spring AI</li><li>MCP</li><li>Gradle</li>
+                </ul>
+                <div class="links">
+                    <a class="btn ghost" href="https://github.com/Badrri-Narayanan/Weather-API-MCP-Server" target="_blank" rel="noopener">View source</a>
+                </div>
+            </article>
+
+            <article class="card" data-tags="backend frontend live">
+                <div class="card-top">
+                    <span class="icon" aria-hidden="true">🎂</span>
+                    <span class="status live">Live</span>
+                </div>
+                <h2>Age Tracker</h2>
+                <p>A full-stack app for tracking people's ages. The TypeScript UI runs on a REST API built with Go, Gin and PostgreSQL that lists people and adds new ones.</p>
+                <ul class="tags">
+                    <li>Go</li><li>Gin</li><li>PostgreSQL</li><li>TypeScript</li>
+                </ul>
+                <div class="links">
+                    <a class="btn primary" href="https://badrri-narayanan.github.io/Age_Tracker_UI/" target="_blank" rel="noopener">Live demo</a>
+                    <a class="btn ghost" href="https://github.com/Badrri-Narayanan/Age_Tracker_API" target="_blank" rel="noopener">API source</a>
+                    <a class="btn ghost" href="https://github.com/Badrri-Narayanan/Age_Tracker_UI" target="_blank" rel="noopener">UI source</a>
+                </div>
+            </article>
+
+            <article class="card" data-tags="frontend">
+                <div class="card-top">
+                    <span class="icon" aria-hidden="true">👑</span>
+                    <span class="status source">Source</span>
+                </div>
+                <h2>CRWN Clothing</h2>
+                <p>A single-page clothing store built with React, Redux and React Router. It uses Firebase for sign-up and login and the Stripe API for payments.</p>
+                <ul class="tags">
+                    <li>React</li><li>Redux</li><li>Firebase</li><li>Stripe</li>
+                </ul>
+                <div class="links">
+                    <a class="btn ghost" href="https://github.com/Badrri-Narayanan/crwn-clothing" target="_blank" rel="noopener">View source</a>
+                </div>
+            </article>
+
+            <article class="card" data-tags="backend frontend live">
+                <div class="card-top">
+                    <span class="icon" aria-hidden="true">🍛</span>
+                    <span class="status live">Live</span>
+                </div>
+                <h2>Hotel Badrri Bhavan</h2>
+                <p>A restaurant menu site with an AngularJS front-end and a Spring Boot back-end. This was my first Spring Boot app.</p>
+                <ul class="tags">
+                    <li>AngularJS</li><li>Spring Boot</li><li>Java</li>
+                </ul>
+                <div class="links">
+                    <a class="btn primary" href="https://badrri-narayanan.github.io/restaurant-menu/" target="_blank" rel="noopener">Live demo</a>
+                    <a class="btn ghost" href="https://github.com/Badrri-Narayanan/Restaurant-Springboot" target="_blank" rel="noopener">API source</a>
+                </div>
+            </article>
+
+            <article class="card" data-tags="frontend live">
+                <div class="card-top">
+                    <span class="icon" aria-hidden="true">🤖</span>
+                    <span class="status live">Live</span>
+                </div>
+                <h2>Robo Friends</h2>
+                <p>A single-page directory that filters a list of friends in real time as you type in the search box. It started out as the Cat Friends pet store demo.</p>
+                <ul class="tags">
+                    <li>React</li><li>TypeScript</li>
+                </ul>
+                <div class="links">
+                    <a class="btn primary" href="https://badrri-narayanan.github.io/robofriends/" target="_blank" rel="noopener">Live demo</a>
+                    <a class="btn ghost" href="https://github.com/Badrri-Narayanan/robofriends" target="_blank" rel="noopener">View source</a>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="mini" aria-labelledby="mini-title">
+            <h3 id="mini-title">Small React experiments</h3>
+            <div class="mini-list">
+                <a class="mini-item" data-tags="frontend live" href="https://badrri-narayanan.github.io/To-Do-React-App/" target="_blank" rel="noopener">
+                    <strong>To-Do List</strong><span>Task list with add and remove</span>
+                </a>
+                <a class="mini-item" data-tags="frontend live" href="https://badrri-narayanan.github.io/ItemList/" target="_blank" rel="noopener">
+                    <strong>Items List</strong><span>Rendering and managing lists</span>
+                </a>
+                <a class="mini-item" data-tags="frontend live" href="https://badrri-narayanan.github.io/React-Router-Demo/" target="_blank" rel="noopener">
+                    <strong>React Router Demo</strong><span>Multi-page routing, House M.D. themed</span>
+                </a>
+                <a class="mini-item" data-tags="frontend live" href="https://badrri-narayanan.github.io/State-Modifier/" target="_blank" rel="noopener">
+                    <strong>State Modifier</strong><span>Component state basics</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year">2026</span> Badrri Narayanan S · <a href="mailto:badrri1995@gmail.com">badrri1995@gmail.com</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const chips = document.querySelectorAll('.chip');
+        const items = document.querySelectorAll('[data-tags]');
+        chips.forEach(chip => chip.addEventListener('click', () => {
+            chips.forEach(c => c.classList.toggle('active', c === chip));
+            const filter = chip.dataset.filter;
+            items.forEach(item => {
+                const match = filter === 'all' || item.dataset.tags.split(' ').includes(filter);
+                item.classList.toggle('hidden', !match);
+            });
+        }));
+    </script>
 </body>
 </html>

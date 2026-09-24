@@ -1,22 +1,105 @@
 <!DOCTYPE html>
-<html>
-	<meta charset="UTF-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="index.css" />
-	<head>
-		<title>Rock Paper Scissors</title>
-	</head>
-	<body>
-		<div>
-			<h1>Rock Paper Scissors</h1>
-			<p>Computer: <span id="comp"></span></p>
-			<p>You: <span id="user"></span></p>
-			<p>Result: <span id="result"></span></p>
-			<p>Your Score: <span id="yourScoreVal" >0</span></p>
-			<p>Computer's Score: <span id="computerScoreVal" >0</span></p>
-			<p>Total games: <span id="totalGames" >0</span></p>
-			<button class="userChoice">Rock</button><button class="userChoice">Paper</button><button class="userChoice">Scissors</button>
-		</div>
-	</body>
-	<script src="app.js" defer></script>
+    <meta name="description" content="Rock Paper Scissors (and Lizard Spock) against a computer that learns your habits.">
+    <title>Rock Paper Scissors</title>
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/myprojects.styles.css">
+    <link rel="stylesheet" href="../shared/game.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a class="brand" href="../../index.html">Badrri<span>.</span></a>
+        <nav>
+            <a href="../../myprojects.html">All projects</a>
+            <a href="../Age_Calculator_and_Birthday_finder/Age_calculator_birthday_day_finder.html">Age Calculator</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero compact">
+            <p class="eyebrow">Mini game</p>
+            <h1>Rock <span class="gradient-text">Paper</span> Scissors</h1>
+            <p class="lead">Pick your move, or press <kbd>R</kbd> <kbd>P</kbd> <kbd>S</kbd>. Switch on Smart CPU and it starts learning your habits.</p>
+        </section>
+
+        <section class="settings" aria-label="Game settings">
+            <div class="seg" data-setting="variant">
+                <button class="active" data-value="classic">Classic</button>
+                <button data-value="extended">+ Lizard &amp; Spock</button>
+            </div>
+            <div class="seg" data-setting="opponent">
+                <button class="active" data-value="random">Random CPU</button>
+                <button data-value="smart">Smart CPU 🧠</button>
+            </div>
+            <div class="seg" data-setting="format">
+                <button class="active" data-value="free">Free play</button>
+                <button data-value="bo5">Best of 5</button>
+            </div>
+        </section>
+
+        <section class="arena" id="arena" aria-live="polite">
+            <div class="side you">
+                <p class="side-label">You</p>
+                <div class="hand-card"><span class="hand" id="you-hand">✊</span></div>
+                <div class="pips" id="you-pips" aria-hidden="true"></div>
+            </div>
+            <div class="verdict">
+                <p class="result" id="result">Make your move</p>
+                <p class="detail" id="detail">Best of luck.</p>
+            </div>
+            <div class="side cpu">
+                <p class="side-label">CPU <span class="cpu-mode" id="cpu-mode">random</span></p>
+                <div class="hand-card"><span class="hand" id="cpu-hand"><span class="flip">✊</span></span></div>
+                <div class="pips" id="cpu-pips" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <section class="choices" id="choices" aria-label="Choose your move"></section>
+
+        <section class="panel rules" id="rules" hidden>
+            <h2>Rules</h2>
+            <ul id="rules-list"></ul>
+        </section>
+
+        <section class="scoreboard" aria-label="Your stats">
+            <div><strong id="stat-wins">0</strong><span>Wins</span></div>
+            <div><strong id="stat-losses">0</strong><span>Losses</span></div>
+            <div><strong id="stat-ties">0</strong><span>Ties</span></div>
+            <div><strong id="stat-rate">–</strong><span>Win rate</span></div>
+            <div><strong id="stat-streak">0</strong><span>Streak 🔥</span></div>
+            <div><strong id="stat-best">0</strong><span>Best streak</span></div>
+        </section>
+
+        <section class="panel history-panel">
+            <div class="history-head">
+                <h2>Recent rounds</h2>
+                <button class="btn ghost small" id="reset">Reset stats</button>
+            </div>
+            <ol class="history" id="history"><li class="empty">No rounds yet.</li></ol>
+        </section>
+    </main>
+
+    <dialog id="match-dialog">
+        <p class="dialog-emoji" id="match-emoji">🏆</p>
+        <h2 id="match-title">You won the match!</h2>
+        <p id="match-score"></p>
+        <form method="dialog"><button class="btn primary">Play again</button></form>
+    </dialog>
+
+    <footer class="site-footer">
+        <p>Built by <a href="../../index.html">Badrri Narayanan S</a></p>
+    </footer>
+
+    <script src="../shared/confetti.js"></script>
+    <script src="app.js"></script>
+</body>
 </html>

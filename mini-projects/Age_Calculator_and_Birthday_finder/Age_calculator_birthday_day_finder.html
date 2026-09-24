@@ -1,63 +1,113 @@
-<html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Age Calculator & Birthday Day Finder</title>
-		<script src="./scripts/moment.js"></script>
-	</head>
-	<body style="padding:10px; text-align: center; background-color: bisque;" >
-		<h1>Age Calculator & Birthday day finder</h1>
-		<div id = "txt-area">
-			<div style="padding:10px;">
-				<input type="date" id="dob"></input>
-			</div>
-			<div style="padding:10px; ">
-				<button style="background-color: cornflowerblue;" onclick="calculateAge()">Calculate my Age</button>
-				<button style="background-color: cornflowerblue;" onclick="findBDay()">Find my Birthday Day</button>
-			</div>
-			<br/>
-			<div id="bday-txt"></div>
-			<div id="age-txt"></div>
-		</div>
-	</body>
-	<script>
-		const theDaysOfTheWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Your exact age, a live countdown to your next birthday, your zodiac signs, life milestones and your age on other planets.">
+    <title>Age Calculator</title>
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/myprojects.styles.css">
+    <link rel="stylesheet" href="../shared/game.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-glow" aria-hidden="true"></div>
 
-		function clearPrevious() {
-			document.getElementById("bday-txt").innerHTML = "";
-			document.getElementById("age-txt").innerHTML = "";
-		}
+    <header class="site-header">
+        <a class="brand" href="../../index.html">Badrri<span>.</span></a>
+        <nav>
+            <a href="../../myprojects.html">All projects</a>
+            <a href="../Rock_Paper_Scissors/rock_paper_scissors.html">Rock Paper Scissors</a>
+        </nav>
+    </header>
 
-		function checkIfDateIsValid() {
-			clearPrevious();
-			let dob = document.getElementById("dob");
-			if(moment(dob.value).isValid()) {
-				return true;
-			}
-			dob.focus();
-			return false;
-		}
+    <main>
+        <section class="hero compact">
+            <p class="eyebrow">Mini tool</p>
+            <h1>How old are you, <span class="gradient-text">really</span>?</h1>
+            <p class="lead">Enter your birthday to see your exact age, a live countdown to your next birthday, your zodiac signs and how old you'd be on Mars.</p>
+        </section>
 
-		function findBDay() {
-			if(checkIfDateIsValid()) {
-				let dob = document.getElementById("dob");
-				let bdate = new Date(dob.value);
-				let day = bdate.getDay();
-				
-				let bdayTxt = document.getElementById("bday-txt");
-				bdayTxt.innerText = "You were born on " + theDaysOfTheWeek[day];
-			}
-		}
+        <form class="panel dob-form" id="dob-form">
+            <label>
+                <span>Date of birth</span>
+                <input type="date" id="dob" min="1900-01-01" required>
+            </label>
+            <label>
+                <span>Time of birth <em>(optional)</em></span>
+                <input type="time" id="tob">
+            </label>
+            <div class="form-actions">
+                <button class="btn primary" type="submit">Calculate</button>
+                <button class="btn ghost" type="button" id="share" hidden>Copy share link</button>
+            </div>
+            <p class="error" id="error" role="alert"></p>
+        </form>
 
-		function calculateAge() {
-			if(checkIfDateIsValid()) {
-				let dob = new Date(document.getElementById("dob").value);
-				let difference = moment.preciseDiff(new Date(), dob, true);
-				document.getElementById("age-txt").innerHTML = "You are " 
-					+ difference.years + " years " 
-					+ difference.months + " months " 
-					+ difference.days + " days "
-					+ " old";
-			}
-		}
-	</script>
+        <div id="results" hidden>
+            <section class="age-hero" aria-live="polite">
+                <p class="birthday-banner" id="birthday-banner" hidden>🎉 Happy birthday! 🎂</p>
+                <p class="age-line" id="age-line"></p>
+                <p class="age-sub" id="age-sub"></p>
+                <p class="ticker"><span id="ticker">0</span> seconds and counting</p>
+            </section>
+
+            <section class="totals" id="totals" aria-label="Your age in other units"></section>
+
+            <div class="two-up">
+                <section class="panel countdown">
+                    <h2>Next birthday</h2>
+                    <div class="countdown-body">
+                        <svg class="ring" viewBox="0 0 120 120" role="img" aria-labelledby="ring-label">
+                            <title id="ring-label">Progress through the year to your next birthday</title>
+                            <defs>
+                                <linearGradient id="ring-gradient" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#7c5cff"/>
+                                    <stop offset="100%" stop-color="#22d3ee"/>
+                                </linearGradient>
+                            </defs>
+                            <circle class="ring-track" cx="60" cy="60" r="52"/>
+                            <circle class="ring-fill" id="ring-fill" cx="60" cy="60" r="52"/>
+                            <text x="60" y="58" class="ring-days" id="ring-days">0</text>
+                            <text x="60" y="76" class="ring-caption">days to go</text>
+                        </svg>
+                        <div>
+                            <p class="next-date" id="next-date"></p>
+                            <p class="turning" id="turning"></p>
+                            <div class="clock" id="clock"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="panel born">
+                    <h2>The day you were born</h2>
+                    <div class="born-body">
+                        <div class="calendar" id="calendar"></div>
+                        <div class="signs" id="signs"></div>
+                    </div>
+                </section>
+            </div>
+
+            <section class="panel">
+                <h2>Life milestones</h2>
+                <ol class="milestones" id="milestones"></ol>
+            </section>
+
+            <section class="panel">
+                <h2>Your age across the solar system</h2>
+                <div class="planets" id="planets"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built by <a href="../../index.html">Badrri Narayanan S</a> · Nothing you enter leaves your browser.</p>
+    </footer>
+
+    <script src="../shared/confetti.js"></script>
+    <script src="app.js"></script>
+</body>
 </html>

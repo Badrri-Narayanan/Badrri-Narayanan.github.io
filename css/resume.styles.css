@@ -1,0 +1,182 @@
+/* Resume page. Builds on the tokens and components in myprojects.styles.css */
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 48px;
+}
+
+.role {
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 0 0 14px;
+}
+
+.avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 38%;
+    border: 4px solid var(--surface);
+    box-shadow:
+        0 0 0 2px var(--accent),
+        0 24px 60px -24px rgba(124, 92, 255, 0.6);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.stats div {
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+.stats strong {
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+}
+.stats span { color: var(--muted); font-size: 0.88rem; }
+
+.section { padding: 56px 0 8px; scroll-margin-top: 16px; }
+
+.section-title {
+    font-size: 0.8rem;
+    font-family: "JetBrains Mono", monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent-2);
+    margin: 0 0 24px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 28px;
+}
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(var(--accent), var(--accent-2), transparent);
+    border-radius: 2px;
+}
+
+.job {
+    position: relative;
+    padding: 24px 26px;
+    margin-bottom: 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+.job::before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 30px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 3px solid var(--accent);
+}
+.job:first-child::before { background: var(--accent); }
+
+.job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.job h3 { margin: 0; font-size: 1.2rem; letter-spacing: -0.01em; }
+.company { margin: 2px 0 0; color: var(--accent); font-weight: 600; }
+.when {
+    margin: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+    white-space: nowrap;
+}
+.job-summary { color: var(--muted); font-style: italic; margin: 14px 0 0; }
+
+.job ul {
+    margin: 12px 0 0;
+    padding-left: 18px;
+    color: var(--muted);
+}
+.job li { margin-bottom: 8px; }
+.job li strong { color: var(--text); }
+
+.client {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--border);
+}
+.client h4 { margin: 0 0 6px; font-size: 1.02rem; }
+.client h4 span {
+    display: block;
+    font-weight: 400;
+    font-size: 0.88rem;
+    color: var(--muted);
+}
+.client > p { color: var(--muted); margin: 8px 0 0; }
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+.skill-group {
+    padding: 20px 22px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+.skill-group.wide { grid-column: 1 / -1; }
+.skill-group h3 { margin: 0 0 12px; font-size: 1rem; }
+.skill-group .tags { margin: 0; }
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+.card.plain { animation: none; }
+.card.plain h3 { margin: 0 0 4px; font-size: 1.08rem; }
+.card.plain p { margin: 0; }
+.card.plain .spoken { margin-top: 12px; }
+
+.contact { text-align: center; padding-top: 80px; }
+.contact h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: -0.03em;
+    margin: 0 0 10px;
+}
+.contact .lead { margin: 0 auto 26px; }
+.contact .links { justify-content: center; }
+.contact .btn.primary::after { content: none; }
+.location { color: var(--muted); font-size: 0.9rem; margin-top: 20px; }
+
+@media (max-width: 800px) {
+    .intro { grid-template-columns: 1fr; gap: 28px; }
+    .avatar { order: -1; width: 128px; height: 128px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .skill-grid, .two-col { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .timeline { padding-left: 20px; }
+    .job { padding: 20px; }
+    .job::before { left: -21px; }
+    .when { white-space: normal; }
+}

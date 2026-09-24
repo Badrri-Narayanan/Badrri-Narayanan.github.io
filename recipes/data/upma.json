@@ -1,0 +1,26 @@
+{
+    "title": "Upma",
+    "emoji": "🥣",
+    "category": "Breakfast & Tiffin",
+    "description": "Roasted semolina cooked with a tempering of mustard, chana dal, onions and tomatoes.",
+    "tags": ["rava", "semolina", "quick"],
+    "ingredients": [
+        "Semolina (Rava)",
+        "Clarified butter (Ghee)",
+        "Cooking oil",
+        "Onions, green chillies and tomatoes (chopped)",
+        "Fresh coriander leaves (chopped)",
+        "Mustard seeds",
+        "Split chana dal (Kadala paruppu)",
+        "Asafoetida (Perungayam)",
+        "Salt to taste",
+        "Water"
+    ],
+    "steps": [
+        { "title": "Roast rava", "text": "Roast the semolina (rava) with a little ghee until fragrant, then set aside." },
+        { "title": "Prep vegetables", "text": "Chop the onions, green chillies, tomatoes and fresh coriander." },
+        { "title": "Tempering", "text": "Heat oil in a pan. Add mustard seeds, split chana dal and asafoetida." },
+        { "title": "Sauté vegetables", "text": "Add the chopped onions and salt. Sauté until the onions are soft and cooked." },
+        { "title": "Boil & cook", "text": "Pour in the required water and bring it to a rolling boil. Slowly add the roasted semolina while stirring continuously to prevent lumps, cover and cook until done. Top with fresh coriander." }
+    ]
+}

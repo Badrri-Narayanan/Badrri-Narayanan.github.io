@@ -1,0 +1,23 @@
+{
+    "title": "Adai",
+    "emoji": "🥞",
+    "category": "Breakfast & Tiffin",
+    "description": "A coarse rice and four-dal batter with red chillies, for crispy protein-rich pancakes.",
+    "tags": ["batter", "dosa", "lentils", "soak overnight"],
+    "ingredients": [
+        "3 cups Rice",
+        "½ cup Split chana dal (Kadala paruppu)",
+        "½ cup Toor dal (split pigeon peas)",
+        "½ cup Moong dal (split yellow mung beans)",
+        "½ cup Urad dal (split skinless black gram)",
+        "8 Dried red chillies",
+        "½ tsp Asafoetida (Perungayam)",
+        "1 tsp Salt",
+        "Water (for soaking)"
+    ],
+    "steps": [
+        { "title": "Soak grains", "text": "Wash and soak the rice, chana dal, toor dal, moong dal, urad dal and dried red chillies in water for 12 hours." },
+        { "title": "Grind", "text": "In a mixer or grinder, grind the soaked rice, dal and chilli mixture along with the asafoetida and salt." },
+        { "title": "Texture", "text": "Make sure the batter is ground to a coarse consistency (not smooth). Use it to make crispy adai pancakes." }
+    ]
+}

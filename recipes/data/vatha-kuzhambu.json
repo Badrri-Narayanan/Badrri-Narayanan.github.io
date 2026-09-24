@@ -1,0 +1,35 @@
+{
+    "title": "Vatha Kuzhambu",
+    "emoji": "🫕",
+    "category": "Kuzhambu & Rasam",
+    "description": "A thick, tangy tamarind curry cooked in sesame oil with a golden dal tempering and onions.",
+    "tags": ["tamarind", "sesame oil", "onion"],
+    "ingredients": [
+        "Tamarind",
+        "1 tsp Rock salt",
+        "6 tbsp Sesame oil (Gingelly oil)",
+        "Mustard seeds",
+        "2 tsp Split chana dal (Kadala paruppu)",
+        "2 tsp Toor dal",
+        "2 tsp Urad dal",
+        "½ tsp Fenugreek seeds (Vendhayam)",
+        "½ tsp Asafoetida (Perungayam)",
+        "2 Dried red chillies",
+        "Chopped onions",
+        "Curry leaves",
+        "2 tbsp Sambhar powder",
+        "Small piece of jaggery",
+        "Rice flour (optional, for thickening)"
+    ],
+    "steps": [
+        { "title": "Prep tamarind", "text": "Soak the tamarind with 1 teaspoon of rock salt in water and extract the tamarind juice." },
+        { "title": "Tempering", "text": "Heat 6 tablespoons of sesame oil in a heavy-bottomed pan. Add mustard seeds, split chana dal, toor dal, urad dal, fenugreek seeds, asafoetida and dried red chillies. Sauté until the dals turn golden brown." },
+        { "title": "Sauté onions", "text": "Add the chopped onions and curry leaves. Sauté until the onions are well cooked." },
+        { "title": "Add spices", "text": "Mix in 2 tablespoons of sambhar powder and the jaggery." },
+        { "title": "Boil", "text": "Pour in the extracted tamarind water." },
+        { "title": "Thicken & finish", "text": "Let the curry boil and reduce until thick, then turn off the stove." }
+    ],
+    "tips": [
+        "If it doesn't thicken enough, stir in 1 tsp of rice flour dissolved in a little water."
+    ]
+}

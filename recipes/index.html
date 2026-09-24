@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Home-style South Indian recipes: sambhar, rasam, kuzhambu, upma, adai and more.">
+    <title>Recipes · Badrri Narayanan</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/myprojects.styles.css">
+    <link rel="stylesheet" href="recipes.css">
+</head>
+<body>
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a class="brand" href="../index.html">Badrri<span>.</span></a>
+        <nav>
+            <a href="#/">Recipes</a>
+            <a href="../myprojects.html">Projects</a>
+            <a href="../index.html">Resume</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="list-view">
+            <div class="hero compact">
+                <p class="eyebrow">Kitchen notebook</p>
+                <h1>Home-style <span class="gradient-text">recipes</span>.</h1>
+                <p class="lead">South Indian everyday cooking. Search by dish or by what's in your fridge: try "okra" or "tamarind".</p>
+            </div>
+
+            <div class="toolbar">
+                <label class="search">
+                    <span class="visually-hidden">Search recipes</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                    <input type="search" id="search" placeholder="Search recipes or ingredients" autocomplete="off">
+                    <kbd>/</kbd>
+                </label>
+                <button class="btn ghost" id="surprise" type="button">🎲 Surprise me</button>
+            </div>
+            <div class="filters" id="categories" role="group" aria-label="Filter by category"></div>
+
+            <p class="count" id="count" aria-live="polite">Loading recipes…</p>
+            <div class="recipe-grid" id="grid"></div>
+            <p class="empty" id="empty" hidden>No recipes match that search.</p>
+            <div class="load-warnings" id="warnings" hidden></div>
+        </section>
+
+        <article id="detail-view" hidden></article>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year">2026</span> Badrri Narayanan S · Recipes are loaded from <code>recipes/data/</code></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

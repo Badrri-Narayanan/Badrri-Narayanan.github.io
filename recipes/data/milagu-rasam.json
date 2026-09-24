@@ -1,0 +1,26 @@
+{
+    "title": "Black Pepper Rasam",
+    "altName": "Milagu Rasam",
+    "emoji": "🍵",
+    "category": "Kuzhambu & Rasam",
+    "description": "A peppery tamarind broth with freshly ground pepper, cumin and coriander, finished with a ghee tempering.",
+    "tags": ["pepper", "tamarind", "soup"],
+    "ingredients": [
+        "2 tbsp Black peppercorns (Milagu)",
+        "2 tbsp Cumin seeds (Jeeragam)",
+        "1 Dried red chilli",
+        "Pinch of Asafoetida (Perungayam)",
+        "A small bunch of fresh coriander leaves (washed)",
+        "Tamarind & salt (soaked in water for 1 hour)",
+        "Water (as required)",
+        "Small piece of jaggery",
+        "1 tsp Clarified butter (Ghee)",
+        "Mustard seeds"
+    ],
+    "steps": [
+        { "title": "Prepare spice powder", "text": "In a grinder, blend black peppercorns, cumin seeds, dried red chilli, asafoetida and fresh coriander leaves into a fine powder." },
+        { "title": "Simmer tamarind base", "text": "Extract juice from the soaked tamarind and salt. Heat the tamarind water in a pot, add the ground spice powder and let it simmer for 20 minutes." },
+        { "title": "Adjust consistency", "text": "Add extra water as needed to reach the thickness you like, and mix in the jaggery." },
+        { "title": "Tempering", "text": "In a small pan, heat the ghee. Add mustard seeds and let them splutter. Pour this tempering into the simmered rasam and turn off the heat." }
+    ]
+}

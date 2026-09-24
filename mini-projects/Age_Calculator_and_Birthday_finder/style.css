@@ -1,0 +1,254 @@
+.dob-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px 20px;
+    margin-bottom: 28px;
+}
+.dob-form label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 0.9rem; }
+.dob-form label em { font-weight: 400; font-style: normal; color: var(--muted); }
+.dob-form input {
+    font: inherit;
+    font-size: 1rem;
+    padding: 10px 14px;
+    min-width: 190px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    color-scheme: light dark;
+}
+.dob-form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.form-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.form-actions .btn { padding: 11px 18px; }
+.error { flex-basis: 100%; margin: 0; color: var(--lose); font-weight: 500; }
+.error:empty { display: none; }
+
+.age-hero {
+    text-align: center;
+    padding: 36px 20px;
+    margin-bottom: 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background:
+        radial-gradient(70% 90% at 50% 0%, rgba(124, 92, 255, 0.18), transparent 70%),
+        var(--surface);
+    animation: rise .5s ease both;
+}
+.birthday-banner { font-size: 1.3rem; font-weight: 700; margin: 0 0 8px; }
+.age-line {
+    margin: 0;
+    font-size: clamp(1.4rem, 4.5vw, 2.6rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--muted);
+}
+.age-line strong {
+    font-size: 1.5em;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.age-sub { margin: 10px 0 0; color: var(--muted); }
+.ticker {
+    display: inline-block;
+    margin: 18px 0 0;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+.ticker span {
+    font-family: "JetBrains Mono", monospace;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.totals {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.totals div {
+    padding: 16px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    text-align: center;
+}
+.totals strong { display: block; font-size: 1.25rem; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.totals span { color: var(--muted); font-size: 0.82rem; }
+
+.two-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+main > div > .panel { margin-bottom: 20px; }
+
+.countdown-body { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.ring { width: 150px; height: 150px; flex-shrink: 0; }
+.ring circle { fill: none; stroke-width: 10; }
+.ring-track { stroke: var(--border); }
+.ring-fill {
+    stroke: url(#ring-gradient);
+    stroke-linecap: round;
+    stroke-dasharray: 326.73;
+    stroke-dashoffset: 326.73;
+    transform: rotate(-90deg);
+    transform-origin: 60px 60px;
+    transition: stroke-dashoffset 1s ease;
+}
+.ring-days { font: 800 28px "Inter", sans-serif; fill: var(--text); text-anchor: middle; }
+.ring-caption { font: 500 10px "Inter", sans-serif; fill: var(--muted); text-anchor: middle; }
+.next-date { margin: 0; font-size: 1.15rem; font-weight: 700; }
+.turning { margin: 4px 0 14px; color: var(--muted); }
+.clock { display: flex; gap: 8px; }
+.clock div {
+    min-width: 54px;
+    padding: 8px 6px;
+    border-radius: 10px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    text-align: center;
+}
+.clock strong { display: block; font-family: "JetBrains Mono", monospace; font-size: 1.1rem; font-variant-numeric: tabular-nums; }
+.clock span { font-size: 0.72rem; color: var(--muted); }
+
+.born-body { display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-start; }
+.calendar { flex: 1 1 210px; }
+.cal-title { margin: 0 0 8px; font-weight: 700; }
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px;
+    text-align: center;
+    font-size: 0.82rem;
+}
+.cal-grid span { padding: 5px 0; border-radius: 8px; }
+.cal-grid .dow { color: var(--muted); font-size: 0.72rem; font-weight: 600; }
+.cal-grid .day { color: var(--muted); }
+.cal-grid .born-day {
+    color: #fff;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 6px 18px -6px var(--accent);
+}
+.signs { display: flex; flex-direction: column; gap: 12px; flex: 1 1 180px; }
+.sign {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+}
+.sign-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    font-size: 1.6rem;
+    background: rgba(124, 92, 255, 0.14);
+}
+.sign strong { display: block; }
+.sign span:not(.sign-icon) { font-size: 0.82rem; color: var(--muted); }
+
+.milestones { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.milestones li {
+    display: grid;
+    grid-template-columns: 28px 1fr auto;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 12px;
+    border-radius: 12px;
+}
+.milestones li div strong { display: block; font-size: 0.97rem; }
+.milestones li div span { font-size: 0.82rem; color: var(--muted); }
+.milestones em { font-style: normal; font-size: 0.85rem; color: var(--muted); font-family: "JetBrains Mono", monospace; }
+.milestones .dot {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+.milestones .passed .dot { border-color: var(--live); background: var(--live); color: #fff; }
+.milestones .passed div strong { color: var(--muted); }
+.milestones .next {
+    background: rgba(124, 92, 255, 0.10);
+    border: 1px solid rgba(124, 92, 255, 0.35);
+}
+.milestones .next .dot { border-color: var(--accent); animation: pulse 2s infinite; }
+.milestones .next em { color: var(--accent); font-weight: 600; }
+
+.planets {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+.planet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 8px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    text-align: center;
+    transition: transform .2s;
+}
+.planet:hover { transform: translateY(-3px); }
+.planet strong { font-size: 1.3rem; letter-spacing: -0.02em; }
+.planet > span:last-child { font-size: 0.78rem; color: var(--muted); }
+.orb {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    box-shadow: inset -8px -6px 14px rgba(0, 0, 0, 0.35);
+}
+.orb.mercury { background: radial-gradient(circle at 35% 35%, #d6d3d1, #78716c); width: 26px; height: 26px; margin: 9px 0 17px; }
+.orb.venus   { background: radial-gradient(circle at 35% 35%, #fde68a, #d97706); width: 36px; height: 36px; margin: 4px 0 12px; }
+.orb.earth   { background: radial-gradient(circle at 35% 35%, #67e8f9, #2563eb 55%, #15803d); width: 38px; height: 38px; margin: 3px 0 11px; }
+.orb.mars    { background: radial-gradient(circle at 35% 35%, #fca5a5, #b91c1c); width: 30px; height: 30px; margin: 7px 0 15px; }
+.orb.jupiter { background: repeating-linear-gradient(170deg, #fed7aa 0 5px, #c2410c 5px 8px, #fdba74 8px 12px); }
+.orb.saturn  { background: radial-gradient(circle at 35% 35%, #fef3c7, #ca8a04); width: 36px; height: 36px; margin: 4px 0 12px; }
+.orb.saturn::after {
+    content: "";
+    position: absolute;
+    left: -12px;
+    right: -12px;
+    top: 50%;
+    height: 10px;
+    margin-top: -5px;
+    border-radius: 50%;
+    border: 2px solid rgba(253, 230, 138, 0.85);
+    transform: rotate(-18deg);
+}
+
+@media (max-width: 860px) {
+    .two-up { grid-template-columns: 1fr; }
+    .planets { grid-template-columns: repeat(3, 1fr); }
+    .totals { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 520px) {
+    .totals { grid-template-columns: repeat(2, 1fr); }
+    .totals div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+    .dob-form input { min-width: 0; width: 100%; }
+    .dob-form label { flex: 1 1 100%; }
+    .clock div { min-width: 0; flex: 1; }
+}

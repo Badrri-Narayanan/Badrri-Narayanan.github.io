@@ -1,0 +1,65 @@
+/* Shared by the mini-projects. Builds on the tokens and components in /css/myprojects.styles.css */
+
+:root { --lose: #f87171; }
+@media (prefers-color-scheme: light) {
+    :root { --lose: #dc2626; }
+}
+
+[hidden] { display: none !important; }
+
+.hero.compact { padding: 32px 0 28px; }
+.hero.compact h1 { font-size: clamp(2.1rem, 5.5vw, 3.4rem); }
+.hero.compact .lead { margin-bottom: 0; }
+
+.panel {
+    padding: 24px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+.panel h2 {
+    margin: 0 0 16px;
+    font-size: 0.8rem;
+    font-family: "JetBrains Mono", monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent-2);
+}
+
+.seg {
+    display: inline-flex;
+    padding: 4px;
+    gap: 2px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+.seg button {
+    font: inherit;
+    font-size: 0.86rem;
+    font-weight: 500;
+    padding: 7px 14px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: background .2s, color .2s;
+}
+.seg button:hover { color: var(--text); }
+.seg button.active { background: var(--accent); color: #fff; }
+
+button.btn { font: inherit; font-weight: 600; font-size: 0.9rem; cursor: pointer; border: 0; }
+button.btn.ghost { border: 1px solid var(--border); background: transparent; }
+button.btn.primary::after { content: none; }
+
+.confetti-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.site-footer a { color: var(--muted); }

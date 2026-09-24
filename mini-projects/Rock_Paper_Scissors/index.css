@@ -1,0 +1,10 @@
+body {
+	background-color: lightblue;
+	text-align: center;
+}
+
+.userChoice {
+	padding: 5px;
+	margin: 10px;
+	background-color: lightgreen;
+}
